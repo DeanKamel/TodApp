@@ -5,17 +5,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.TextView;
 
+
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class ProfilePage extends AppCompatActivity {
 
 
-    TextInputLayout profileName, email, username;
-
-    FirebaseDatabase rootNode;
-
+    private TextView nameTextView, usernameTextView, emailTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,27 +32,13 @@ public class ProfilePage extends AppCompatActivity {
         setContentView(R.layout.activity_profile_page);
 
 
-        profileName = findViewById(R.id.profile_name);
-        profileName = findViewById(R.id.profile_email);
-        profileName = findViewById(R.id.profile_username);
+        nameTextView = findViewById(R.id.name_textview);
+        usernameTextView = findViewById(R.id.username_textview);
+        emailTextView = findViewById(R.id.email_textview);
 
 
-
-//        displayProfileData();
-
+        nameTextView.setText(Login.nameFromDB);
+        usernameTextView.setText(Login.usernameFromDB);
+        emailTextView.setText(Login.emailFromDB);
     }
-
-//    private void displayProfileData() {
-//        Intent intent = getIntent();
-//        String user_name = intent.getStringExtra("name");
-//        String user_username = intent.getStringExtra("username");
-//        String user_email = intent.getStringExtra("email");
-//
-//        profileName.getEditText().setText(user_name);
-//        username.getEditText().setText(user_username);
-//        email.getEditText().setText(user_email);
-//
-//
-//
-//    }
 }

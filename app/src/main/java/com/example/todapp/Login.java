@@ -30,6 +30,12 @@ public class Login extends AppCompatActivity {
     TextView signupView;
     ProgressBar progessBar;
 
+    public static String enteredUsername;
+
+    public static String nameFromDB, usernameFromDB, emailFromDB;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,7 +109,7 @@ public class Login extends AppCompatActivity {
 
     private void isUser() {
 
-        String enteredUsername = textInputEditTextUsername.getEditText().getText().toString();
+        enteredUsername = textInputEditTextUsername.getEditText().getText().toString();
         String enteredPassword = textInputEditTextPassword.getEditText().getText().toString();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
@@ -119,9 +125,9 @@ public class Login extends AppCompatActivity {
                     if (passwordFromDB.equals(enteredPassword)){
                         textInputEditTextUsername.setError(null);
                         textInputEditTextUsername.setErrorEnabled(false);
-                        String nameFromDB = snapshot.child(enteredUsername).child("name").getValue(String.class);
-                        String usernameFromDB = snapshot.child(enteredUsername).child("username").getValue(String.class);
-                        String emailFromDB = snapshot.child(enteredUsername).child("email").getValue(String.class);
+                        nameFromDB = snapshot.child(enteredUsername).child("name").getValue(String.class);
+                        usernameFromDB = snapshot.child(enteredUsername).child("username").getValue(String.class);
+                        emailFromDB = snapshot.child(enteredUsername).child("email").getValue(String.class);
                         Intent intent = new Intent(getApplicationContext(), Home_Screen.class);
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("username", usernameFromDB);
@@ -136,8 +142,6 @@ public class Login extends AppCompatActivity {
                     textInputEditTextUsername.setError("User does not exist");
                     textInputEditTextUsername.requestFocus();
                     }
-
-
                 }
 
             @Override
