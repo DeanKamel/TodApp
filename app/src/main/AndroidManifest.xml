@@ -13,7 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ProgressPage"></activity>
+        <activity android:name=".AlphabetLevelTwo"></activity>
+        <activity android:name=".AlphabetLevelOne11" />
+        <activity android:name=".AlphabetLevelOne10" />
+        <activity android:name=".AlphabetLevelOne9" />
+        <activity android:name=".AlphabetLevelOne8" />
+        <activity android:name=".AlphabetLevelOne7" />
+        <activity android:name=".AlphabetLevelOne6" />
+        <activity android:name=".AlphabetLevelOne5" />
+        <activity android:name=".AlphabetLevelOne4" />
+        <activity android:name=".AlphabetLevelOne3" />
+        <activity android:name=".AlphabetLevelOne2" />
+        <activity android:name=".AlphabetLevelOne" />
+        <activity android:name=".ProgressPage" />
         <activity android:name=".ProfilePage" />
         <activity android:name=".AnimalsGame" />
         <activity android:name=".NumbersGame" />
@@ -23,7 +35,6 @@
         <activity android:name=".Login" />
         <activity android:name=".Signup" />
         <activity android:name=".Dashboard" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

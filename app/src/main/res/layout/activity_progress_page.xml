@@ -4,6 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDEABD"
     tools:context=".ProgressPage">
+
+    <TextView
+        android:id="@+id/xp_alphabet"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:text="#"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+    <TextView
+        android:id="@+id/xp_number"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="60dp"
+        android:text="#"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+    <TextView
+        android:id="@+id/xp_animals"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="120dp"
+        android:text="#"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+    <TextView
+        android:id="@+id/xp_earned"
+        android:layout_width="204dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="44dp"
+        android:text="XP Earned:"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="Alphabet: "
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Numbers: "
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="120dp"
+        android:text="Animals:"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
