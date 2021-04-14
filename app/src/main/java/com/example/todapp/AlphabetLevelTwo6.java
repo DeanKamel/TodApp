@@ -10,47 +10,46 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class AlphabetLevelTwo extends AppCompatActivity {
+public class AlphabetLevelTwo6 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alphabet_level_two);
+        setContentView(R.layout.activity_alphabet_level_two6);
 
+        final MediaPlayer f_sound = MediaPlayer.create(this, R.raw.f);
+        ImageButton f = findViewById(R.id.f_sound_btn);
 
-        final MediaPlayer m_sound = MediaPlayer.create(this, R.raw.m);
-        ImageButton m = findViewById(R.id.m_sound_btn);
-
-        m.setOnClickListener(new View.OnClickListener() {
+        f.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                m_sound.start();
+                f_sound.start();
             }
         });
 
-        Button m_btn = findViewById(R.id.choice_m_1);
-        Button g_btn = findViewById(R.id.choice_g_1);
-        Button l_btn = findViewById(R.id.choice_l_1);
+        Button f_btn = findViewById(R.id.choice_f_6);
+        Button u_btn = findViewById(R.id.choice_u_6);
+        Button o_btn = findViewById(R.id.choice_o_6);
 
-        m_btn.setOnClickListener(new View.OnClickListener() {
+        f_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
                 AlphabetLevelOne.xp++;
-                Intent intent = new Intent(getApplicationContext(), AlphabetLevelTwo2.class);
+                Intent intent = new Intent(getApplicationContext(), AlphabetLevelTwo7.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        g_btn.setOnClickListener(new View.OnClickListener() {
+        u_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
             }
         });
 
-        l_btn.setOnClickListener(new View.OnClickListener() {
+        o_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();

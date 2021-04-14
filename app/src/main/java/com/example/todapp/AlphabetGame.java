@@ -36,6 +36,14 @@ public class AlphabetGame extends AppCompatActivity{
             }
         });
 
+        Button levelThree = findViewById(R.id.level_three_btn);
+        levelThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AlphabetLevelThree.class);
+                startActivity(intent);
+            }
+        });
 
 
 
