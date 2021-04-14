@@ -10,50 +10,52 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class AlphabetLevelThree3 extends AppCompatActivity {
+public class AlphabetLevelThree6 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alphabet_level_three3);
+        setContentView(R.layout.activity_alphabet_level_three6);
 
-        final MediaPlayer w_sound = MediaPlayer.create(this, R.raw.w);
-        ImageButton w = findViewById(R.id.w_sound_btn);
+        final MediaPlayer x_sound = MediaPlayer.create(this, R.raw.x);
+        ImageButton x = findViewById(R.id.x_sound_btn);
 
-        w.setOnClickListener(new View.OnClickListener() {
+        x.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                w_sound.start();
+                x_sound.start();
             }
         });
 
-        Button x_btn = findViewById(R.id.choice_x_3);
-        Button v_btn = findViewById(R.id.choice_v_3);
-        Button w_btn = findViewById(R.id.choice_w_3);
-
-        w_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                AlphabetLevelOne.xp++;
-                Intent intent = new Intent(getApplicationContext(), AlphabetLevelThree4.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        v_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-            }
-        });
+        Button x_btn = findViewById(R.id.choice_x_6);
+        Button z_btn = findViewById(R.id.choice_z_6);
+        Button j_btn = findViewById(R.id.choice_j_6);
 
         x_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
+                AlphabetLevelOne.xp++;
+                Intent intent = new Intent(getApplicationContext(), AlphabetGame.class);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Completed Level 3!!!", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
+        z_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
             }
         });
+
+        j_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

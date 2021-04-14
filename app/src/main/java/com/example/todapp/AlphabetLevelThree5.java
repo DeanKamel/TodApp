@@ -10,39 +10,39 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class AlphabetLevelThree3 extends AppCompatActivity {
+public class AlphabetLevelThree5 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alphabet_level_three3);
+        setContentView(R.layout.activity_alphabet_level_three5);
 
-        final MediaPlayer w_sound = MediaPlayer.create(this, R.raw.w);
-        ImageButton w = findViewById(R.id.w_sound_btn);
+        final MediaPlayer y_sound = MediaPlayer.create(this, R.raw.y);
+        ImageButton y = findViewById(R.id.y_sound_btn);
 
-        w.setOnClickListener(new View.OnClickListener() {
+        y.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                w_sound.start();
+                y_sound.start();
             }
         });
 
-        Button x_btn = findViewById(R.id.choice_x_3);
-        Button v_btn = findViewById(R.id.choice_v_3);
-        Button w_btn = findViewById(R.id.choice_w_3);
+        Button x_btn = findViewById(R.id.choice_x_5);
+        Button w_btn = findViewById(R.id.choice_w_5);
+        Button y_btn = findViewById(R.id.choice_y_5);
 
-        w_btn.setOnClickListener(new View.OnClickListener() {
+        y_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
                 AlphabetLevelOne.xp++;
-                Intent intent = new Intent(getApplicationContext(), AlphabetLevelThree4.class);
+                Intent intent = new Intent(getApplicationContext(), AlphabetLevelThree6.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        v_btn.setOnClickListener(new View.OnClickListener() {
+        w_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
@@ -55,5 +55,6 @@ public class AlphabetLevelThree3 extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 }

@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AlphabetLevelThree3"></activity>
+        <activity android:name=".AlphabetLevelThree6"></activity>
+        <activity android:name=".AlphabetLevelThree5" />
+        <activity android:name=".AlphabetLevelThree4" />
+        <activity android:name=".AlphabetLevelThree3" />
         <activity android:name=".AlphabetLevelThree2" />
         <activity android:name=".AlphabetLevelThree" />
         <activity android:name=".AlphabetLevelTwo9" />
