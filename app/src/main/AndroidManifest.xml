@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".NumbersLevelThree10"></activity>
+        <activity android:name=".AnimalsLevelTwo"></activity>
+        <activity android:name=".AnimalsLevelOne" />
+        <activity android:name=".NumbersLevelThree10" />
         <activity android:name=".NumbersLevelThree9" />
         <activity android:name=".NumbersLevelThree8" />
         <activity android:name=".NumbersLevelThree7" />
