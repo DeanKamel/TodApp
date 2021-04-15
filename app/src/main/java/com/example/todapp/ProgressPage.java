@@ -16,5 +16,9 @@ public class ProgressPage extends AppCompatActivity {
         TextView xp_alph = findViewById(R.id.xp_alphabet);
         xp_alph.setText(String.valueOf(AlphabetLevelOne.xp));
 
+        TextView xp_num = findViewById(R.id.xp_number);
+        xp_num.setText(String.valueOf(NumbersLevelOne.xp_numbers));
+
+
     }
 }

@@ -38,7 +38,7 @@ public class AlphabetLevelOne11 extends AppCompatActivity {
                 AlphabetLevelOne.xp++;
                 Intent intent = new Intent(getApplicationContext(), AlphabetGame.class);
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(), "Completed Level 1!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Completed Level 1!!!", Toast.LENGTH_LONG).show();
                 finish();
             }
         });

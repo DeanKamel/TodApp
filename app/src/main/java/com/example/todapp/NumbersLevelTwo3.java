@@ -10,52 +10,50 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class AlphabetLevelThree6 extends AppCompatActivity {
+public class NumbersLevelTwo3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alphabet_level_three6);
+        setContentView(R.layout.activity_numbers_level_two3);
 
-        final MediaPlayer x_sound = MediaPlayer.create(this, R.raw.x);
-        ImageButton x = findViewById(R.id.x_sound_btn);
+        final MediaPlayer s3_sound = MediaPlayer.create(this, R.raw.s3);
+        ImageButton n3 = findViewById(R.id.n3_sound_btn);
 
-        x.setOnClickListener(new View.OnClickListener() {
+        n3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                x_sound.start();
+                s3_sound.start();
             }
         });
 
-        Button x_btn = findViewById(R.id.choice_x_6);
-        Button z_btn = findViewById(R.id.choice_z_6);
-        Button j_btn = findViewById(R.id.choice_j_6);
+        Button n3_btn = findViewById(R.id.choice3_3);
+        Button n8_btn = findViewById(R.id.choice8_3);
+        Button n6_btn = findViewById(R.id.choice6_3);
 
-        x_btn.setOnClickListener(new View.OnClickListener() {
+        n3_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                AlphabetLevelOne.xp++;
-                Intent intent = new Intent(getApplicationContext(), AlphabetGame.class);
+                NumbersLevelOne.xp_numbers++;
+                Intent intent = new Intent(getApplicationContext(), NumbersLevelTwo4.class);
                 startActivity(intent);
-                Toast.makeText(getApplicationContext(), "Completed Level 3!!!", Toast.LENGTH_LONG).show();
                 finish();
             }
         });
 
-        z_btn.setOnClickListener(new View.OnClickListener() {
+        n8_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
             }
         });
 
-        j_btn.setOnClickListener(new View.OnClickListener() {
+        n6_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
