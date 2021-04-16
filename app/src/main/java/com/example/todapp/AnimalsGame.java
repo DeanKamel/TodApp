@@ -35,14 +35,14 @@ public class AnimalsGame extends AppCompatActivity {
         });
 
 
-//        final MediaPlayer frog = MediaPlayer.create(this, R.raw.frog);
-//        ImageButton f = findViewById(R.id.frog);
-//        f.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                frog.start();
-//            }
-//        });
+        final MediaPlayer bird = MediaPlayer.create(this, R.raw.birds);
+        ImageButton b = findViewById(R.id.bird);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bird.start();
+            }
+        });
 
     }
 }

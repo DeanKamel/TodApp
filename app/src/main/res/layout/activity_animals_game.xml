@@ -52,7 +52,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/rooster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -64,7 +64,7 @@
         app:srcCompat="@drawable/rooster" />
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/cow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -72,11 +72,11 @@
         android:layout_marginTop="16dp"
         android:background="#FDEABD"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        app:layout_constraintTop_toBottomOf="@+id/rooster"
         app:srcCompat="@drawable/cow" />
 
     <ImageButton
-        android:id="@+id/imageButton14"
+        android:id="@+id/elephant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -84,34 +84,34 @@
         android:layout_marginTop="12dp"
         android:background="#FDEABD"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton11"
+        app:layout_constraintTop_toBottomOf="@+id/cow"
         app:srcCompat="@drawable/elephant" />
 
     <ImageButton
-        android:id="@+id/imageButton12"
+        android:id="@+id/lion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="#FDEABD"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton16"
+        app:layout_constraintEnd_toStartOf="@+id/bird"
         app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toEndOf="@+id/imageButton11"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
+        app:layout_constraintStart_toEndOf="@+id/cow"
+        app:layout_constraintTop_toBottomOf="@+id/duck"
         app:srcCompat="@drawable/lion" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/pig"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="#FDEABD"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton13"
-        app:layout_constraintStart_toEndOf="@+id/imageButton14"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton12"
+        app:layout_constraintEnd_toStartOf="@+id/sheep"
+        app:layout_constraintStart_toEndOf="@+id/elephant"
+        app:layout_constraintTop_toBottomOf="@+id/lion"
         app:srcCompat="@drawable/pig" />
 
     <ImageButton
-        android:id="@+id/imageButton13"
+        android:id="@+id/sheep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -119,11 +119,11 @@
         android:layout_marginRight="16dp"
         android:background="#FDEABD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton16"
+        app:layout_constraintTop_toBottomOf="@+id/bird"
         app:srcCompat="@drawable/sheep" />
 
     <ImageButton
-        android:id="@+id/imageButton16"
+        android:id="@+id/bird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -131,7 +131,7 @@
         android:layout_marginRight="16dp"
         android:background="#FDEABD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton10"
+        app:layout_constraintTop_toBottomOf="@+id/horse"
         app:srcCompat="@drawable/bird" />
 
     <ImageButton
@@ -147,7 +147,7 @@
         app:srcCompat="@drawable/frog" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/dog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -159,7 +159,7 @@
         app:srcCompat="@drawable/dog" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/horse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -167,11 +167,11 @@
         android:layout_marginRight="16dp"
         android:background="#FDEABD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/dog"
         app:srcCompat="@drawable/horse" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/cat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -180,21 +180,21 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="#FDEABD"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/dog"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toEndOf="@+id/frog"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cat" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/duck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="#FDEABD"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton10"
-        app:layout_constraintStart_toEndOf="@+id/imageButton6"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:layout_constraintEnd_toStartOf="@+id/horse"
+        app:layout_constraintStart_toEndOf="@+id/rooster"
+        app:layout_constraintTop_toBottomOf="@+id/cat"
         app:srcCompat="@drawable/duck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
