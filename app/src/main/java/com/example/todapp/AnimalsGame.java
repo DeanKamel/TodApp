@@ -29,7 +29,7 @@ public class AnimalsGame extends AppCompatActivity {
         levelTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AnimalsLevelTwo.class);
+                Intent intent = new Intent(getApplicationContext(), AnimalsLevelOne2.class);
                 startActivity(intent);
             }
         });

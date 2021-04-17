@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimalsLevelOne8">
+
+
+
+
+    <ImageButton
+        android:id="@+id/n1_sound_btn"
+        android:layout_width="101dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#00BCD4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_sound"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:id="@+id/sheep_choice"
+        android:layout_width="114dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/n1_sound_btn"
+        app:srcCompat="@drawable/sheep" />
+
+    <ImageButton
+        android:id="@+id/rooster_choice"
+        android:layout_width="114dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toStartOf="@+id/cat_choice"
+        app:layout_constraintStart_toEndOf="@+id/sheep_choice"
+        app:layout_constraintTop_toBottomOf="@+id/n1_sound_btn"
+        app:srcCompat="@drawable/rooster" />
+
+    <ImageButton
+        android:id="@+id/cat_choice"
+        android:layout_width="114dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/n1_sound_btn"
+        app:srcCompat="@drawable/cat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

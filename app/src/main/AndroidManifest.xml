@@ -13,7 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AnimalsLevelTwo"></activity>
+        <activity android:name=".AnimalsLevelOne10"></activity>
+        <activity android:name=".AnimalsLevelOne9" />
+        <activity android:name=".AnimalsLevelOne8" />
+        <activity android:name=".AnimalsLevelOne7" />
+        <activity android:name=".AnimalsLevelOne6" />
+        <activity android:name=".AnimalsLevelOne5" />
+        <activity android:name=".AnimalsLevelOne4" />
+        <activity android:name=".AnimalsLevelOne3" />
+        <activity android:name=".AnimalsLevelOne2" />
         <activity android:name=".AnimalsLevelOne" />
         <activity android:name=".NumbersLevelThree10" />
         <activity android:name=".NumbersLevelThree9" />
