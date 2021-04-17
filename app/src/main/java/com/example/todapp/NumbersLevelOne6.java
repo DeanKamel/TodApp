@@ -46,6 +46,7 @@ public class NumbersLevelOne6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                NumbersLevelOne.wrong_numbers++;
             }
         });
 
@@ -53,6 +54,7 @@ public class NumbersLevelOne6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                NumbersLevelOne.wrong_numbers++;
             }
         });
     }

@@ -14,7 +14,7 @@ public class AlphabetLevelOne extends AppCompatActivity {
 
     //Experience points you gain after getting a correct response
     public static int xp = 0;
-
+    public static int wrong = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,7 @@ public class AlphabetLevelOne extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                wrong++;
             }
         });
 
@@ -58,6 +59,7 @@ public class AlphabetLevelOne extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                wrong++;
             }
         });
 
