@@ -26,8 +26,9 @@ public class ProgressPage extends AppCompatActivity {
 
         //info for animal
         TextView xp_animal = findViewById(R.id.xp_animals);
-        //xp_num.setText(String.valueOf(AnimalsLevelOne.xp_animals));
-       // xp_num.setText(String.valueOf(AnimalsLevelOne.wrong_animals));
+        TextView wrong_animal = findViewById(R.id.alphabet_wrong);
+        xp_animal.setText(String.valueOf(AnimalsLevelOne.xp_animals));
+        wrong_animal.setText(String.valueOf(AnimalsLevelOne.wrong_animals));
 
 
     }
