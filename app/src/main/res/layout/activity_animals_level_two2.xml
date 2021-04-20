@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimalsLevelTwo2">
+
+
+  <ImageButton
+      android:id="@+id/cow_choice"
+      android:layout_width="114dp"
+      android:layout_height="126dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginTop="150dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/Chooserooster"
+      app:srcCompat="@drawable/cow" />
+
+  <ImageButton
+      android:id="@+id/pig_choice"
+      android:layout_width="114dp"
+      android:layout_height="125dp"
+      android:layout_marginTop="150dp"
+      app:layout_constraintEnd_toStartOf="@+id/rooster_choice"
+      app:layout_constraintStart_toEndOf="@+id/cow_choice"
+      app:layout_constraintTop_toBottomOf="@+id/Chooserooster"
+      app:srcCompat="@drawable/pig" />
+
+  <ImageButton
+      android:id="@+id/rooster_choice"
+      android:layout_width="114dp"
+      android:layout_height="125dp"
+      android:layout_marginTop="150dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginRight="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/Chooserooster"
+      app:srcCompat="@drawable/rooster" />
+
+  <TextView
+      android:id="@+id/Chooserooster"
+      android:layout_width= "wrap_content"
+      android:layout_height="wrap_content"
+      android:background="#FFFFFF"
+      android:text="Which one is the rooster?"
+      android:textAllCaps="false"
+      android:textColor="#DC1313"
+      android:textSize="30sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
