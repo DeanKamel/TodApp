@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class NumbersLevelOne extends AppCompatActivity {
 
     public static int xp_numbers = 0;
+    public static int wrong_numbers = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class NumbersLevelOne extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                wrong_numbers++;
             }
         });
 
@@ -57,6 +59,7 @@ public class NumbersLevelOne extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                wrong_numbers++;
             }
         });
 

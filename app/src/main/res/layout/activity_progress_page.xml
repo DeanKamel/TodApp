@@ -17,13 +17,36 @@
         app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
 
     <TextView
-        android:id="@+id/xp_number"
+        android:id="@+id/alphabet_wrong"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:text="#"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/xp_alphabet"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+    <TextView
+        android:id="@+id/wrong_number"
         android:layout_width="125dp"
         android:layout_height="39dp"
         android:layout_marginTop="60dp"
         android:text="#"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+
+    <TextView
+        android:id="@+id/number_xp"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginRight="128dp"
+        android:text="#"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
 
     <TextView
@@ -37,15 +60,38 @@
         app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
 
     <TextView
+        android:id="@+id/animals_wrong"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="120dp"
+        android:text="#"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/xp_animals"
+        app:layout_constraintTop_toBottomOf="@+id/xp_earned" />
+
+    <TextView
         android:id="@+id/xp_earned"
-        android:layout_width="204dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
         android:layout_marginTop="44dp"
-        android:text="XP Earned:"
-        android:textSize="36sp"
+        android:text="Correct:"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Incorrect"
+        android:layout_width="125dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        android:text="Incorrect:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/alphabet_wrong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/xp_earned"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

@@ -47,6 +47,7 @@ public class AlphabetLevelThree6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                AlphabetLevelOne.wrong++;
             }
         });
 
@@ -54,6 +55,7 @@ public class AlphabetLevelThree6 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
+                AlphabetLevelOne.wrong++;
             }
         });
 
