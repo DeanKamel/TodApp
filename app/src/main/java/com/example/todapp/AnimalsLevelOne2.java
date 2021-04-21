@@ -1,5 +1,6 @@
 package com.example.todapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,6 +9,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class AnimalsLevelOne2 extends AppCompatActivity {
 
@@ -31,11 +39,18 @@ public class AnimalsLevelOne2 extends AppCompatActivity {
             ImageButton duck_button = findViewById(R.id.duck_choice);
             ImageButton dog_button = findViewById(R.id.dog_choice);
 
-            sheep_button.setOnClickListener(new View.OnClickListener() {
+
+
+        sheep_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                    AnimalsLevelOne.xp_animals++;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    AnimalsLevelOne.correctAnimalDB++;
+                    AnimalsLevelOne.ref.child(Login.usernameFromDB).child("correctAnimals").setValue(AnimalsLevelOne.correctAnimalDB);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
                     Intent intent = new Intent(getApplicationContext(), AnimalsLevelOne3.class);
                     startActivity(intent);
                     finish();
@@ -46,7 +61,10 @@ public class AnimalsLevelOne2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                    AnimalsLevelOne.wrong_animals++;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    AnimalsLevelOne.wrongAnimalDB++;
+                    AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             });
 
@@ -54,7 +72,10 @@ public class AnimalsLevelOne2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                    AnimalsLevelOne.wrong_animals++;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    AnimalsLevelOne.wrongAnimalDB++;
+                    AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             });
     }

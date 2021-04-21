@@ -153,7 +153,21 @@ public class Signup extends AppCompatActivity {
         String username = textInputEditTextUsername.getEditText().getText().toString();
         String password = textInputEditTextPassword.getEditText().getText().toString();
 
-        UserHelperClass helperClass = new UserHelperClass(name, email, username, password);
+        int correct_alphabet = 0;
+        int correct_animals = 0;
+        int correct_numbers = 0;
+
+        int wrong_alphabet = 0;
+        int wrong_animals = 0;
+        int wrong_numbers = 0;
+
+        int timesPlayed_alphabet = 0;
+        int timesPlayed_animals = 0;
+        int timesPlayed_numbers = 0;
+
+
+        UserHelperClass helperClass = new UserHelperClass(name, email, username, password, correct_alphabet, correct_animals, correct_numbers,
+                                                        wrong_alphabet, wrong_animals, wrong_numbers, timesPlayed_alphabet, timesPlayed_animals, timesPlayed_numbers);
         reference.child(username).setValue(helperClass);
 
         return 1;
