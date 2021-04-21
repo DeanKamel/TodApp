@@ -37,7 +37,8 @@ public class AnimalsLevelOne10 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                AnimalsLevelOne.xp_animals++;
+                AnimalsLevelOne.correctAnimalDB++;
+                AnimalsLevelOne.ref.child(Login.usernameFromDB).child("correctAnimals").setValue(AnimalsLevelOne.correctAnimalDB);
                 Intent intent = new Intent(getApplicationContext(), AnimalsGame.class);
                 startActivity(intent);
                 Toast.makeText(getApplicationContext(), "Completed Level 1!!!", Toast.LENGTH_LONG).show();
@@ -49,7 +50,8 @@ public class AnimalsLevelOne10 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                AnimalsLevelOne.wrong_animals++;
+                AnimalsLevelOne.wrongAnimalDB++;
+                AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
             }
         });
 
@@ -57,7 +59,8 @@ public class AnimalsLevelOne10 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                AnimalsLevelOne.wrong_animals++;
+                AnimalsLevelOne.wrongAnimalDB++;
+                AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
             }
         });
 

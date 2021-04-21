@@ -27,7 +27,8 @@ public class AnimalsLevelTwo2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                AnimalsLevelOne.xp_animals++;
+                AnimalsLevelOne.correctAnimalDB++;
+                AnimalsLevelOne.ref.child(Login.usernameFromDB).child("correctAnimals").setValue(AnimalsLevelOne.correctAnimalDB);
                 Intent intent = new Intent(getApplicationContext(), AnimalsLevelTwo3.class);
                 startActivity(intent);
                 frog.start();

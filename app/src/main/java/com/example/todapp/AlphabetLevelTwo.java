@@ -36,7 +36,8 @@ public class AlphabetLevelTwo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                AlphabetLevelOne.xp++;
+                AlphabetLevelOne.correctAlphabetDB++;
+                AlphabetLevelOne.ref.child(Login.usernameFromDB).child("correctAlphabet").setValue(AlphabetLevelOne.correctAlphabetDB);
                 Intent intent = new Intent(getApplicationContext(), AlphabetLevelTwo2.class);
                 startActivity(intent);
                 finish();
@@ -47,7 +48,8 @@ public class AlphabetLevelTwo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                AlphabetLevelOne.wrong++;
+                AlphabetLevelOne.wrongAlphabetDB++;
+                AlphabetLevelOne.ref.child(Login.usernameFromDB).child("wrongAlphabet").setValue(AlphabetLevelOne.wrongAlphabetDB);
             }
         });
 
@@ -55,7 +57,8 @@ public class AlphabetLevelTwo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                AlphabetLevelOne.wrong++;
+                AlphabetLevelOne.wrongAlphabetDB++;
+                AlphabetLevelOne.ref.child(Login.usernameFromDB).child("wrongAlphabet").setValue(AlphabetLevelOne.wrongAlphabetDB);
             }
         });
 

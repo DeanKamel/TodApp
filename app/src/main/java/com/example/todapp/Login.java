@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
 
     TextInputLayout textInputEditTextUsername, textInputEditTextPassword;
     Button login_button;
-    TextView signupView;
+    TextView signupView,forgotPassword;
     ProgressBar progessBar;
 
     public static String enteredUsername;
@@ -46,6 +46,9 @@ public class Login extends AppCompatActivity {
         login_button = findViewById(R.id.login_btn);
         signupView = findViewById(R.id.signup_text);
 
+        forgotPassword = findViewById(R.id.forgotPassword);
+
+
 
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,15 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Signup.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ForgotPassword.class);
                 startActivity(intent);
                 finish();
             }

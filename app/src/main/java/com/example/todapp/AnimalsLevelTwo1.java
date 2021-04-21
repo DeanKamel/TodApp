@@ -27,7 +27,8 @@ public class AnimalsLevelTwo1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                AnimalsLevelOne.xp_animals++;
+                AnimalsLevelOne.correctAnimalDB++;
+                AnimalsLevelOne.ref.child(Login.usernameFromDB).child("correctAnimals").setValue(AnimalsLevelOne.correctAnimalDB);
                 Intent intent = new Intent(getApplicationContext(), AnimalsLevelTwo2.class);
                 startActivity(intent);
                 rooster.start();
@@ -38,8 +39,8 @@ public class AnimalsLevelTwo1 extends AppCompatActivity {
         cat_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                AnimalsLevelOne.wrong_animals++;
+                AnimalsLevelOne.wrongAnimalDB++;
+                AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
             }
         });
 
@@ -47,7 +48,8 @@ public class AnimalsLevelTwo1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                AnimalsLevelOne.wrong_animals++;
+                AnimalsLevelOne.wrongAnimalDB++;
+                AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
             }
         });
 
