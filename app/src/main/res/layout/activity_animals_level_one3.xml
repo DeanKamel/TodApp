@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDEABD"
     tools:context=".AnimalsLevelOne3">
 
     <ImageButton
-        android:id="@+id/n1_sound_btn"
+        android:id="@+id/a3_sound_btn"
         android:layout_width="101dp"
         android:layout_height="94dp"
         android:layout_marginStart="10dp"
@@ -29,8 +30,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="150dp"
+        android:background="#FDEABD"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/n1_sound_btn"
+        app:layout_constraintTop_toBottomOf="@+id/a3_sound_btn"
         app:srcCompat="@drawable/lion" />
 
     <ImageButton
@@ -38,9 +40,10 @@
         android:layout_width="114dp"
         android:layout_height="125dp"
         android:layout_marginTop="150dp"
+        android:background="#FDEABD"
         app:layout_constraintEnd_toStartOf="@+id/bird_choice"
         app:layout_constraintStart_toEndOf="@+id/lion_choice"
-        app:layout_constraintTop_toBottomOf="@+id/n1_sound_btn"
+        app:layout_constraintTop_toBottomOf="@+id/a3_sound_btn"
         app:srcCompat="@drawable/horse" />
 
     <ImageButton
@@ -50,8 +53,9 @@
         android:layout_marginTop="150dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="#FDEABD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/n1_sound_btn"
+        app:layout_constraintTop_toBottomOf="@+id/a3_sound_btn"
         app:srcCompat="@drawable/bird" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDEABD"
     tools:context=".AnimalsLevelTwo4">
 
 
@@ -16,6 +17,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="150dp"
+        android:background="#FDEABD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Choosedog"
         app:srcCompat="@drawable/sheep" />
@@ -25,6 +27,7 @@
         android:layout_width="114dp"
         android:layout_height="125dp"
         android:layout_marginTop="150dp"
+        android:background="#FDEABD"
         app:layout_constraintEnd_toStartOf="@+id/dog_choice"
         app:layout_constraintStart_toEndOf="@+id/sheep_choice"
         app:layout_constraintTop_toBottomOf="@+id/Choosedog"
@@ -37,15 +40,16 @@
         android:layout_marginTop="150dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="#FDEABD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Choosedog"
         app:srcCompat="@drawable/dog" />
 
     <TextView
         android:id="@+id/Choosedog"
-        android:layout_width= "wrap_content"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:layout_marginTop="80dp"
         android:text="Which one is the sheep?"
         android:textAllCaps="false"
         android:textColor="#DC1313"
@@ -53,7 +57,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
 
 
 

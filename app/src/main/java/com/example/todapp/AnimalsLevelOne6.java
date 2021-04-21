@@ -3,6 +3,7 @@ package com.example.todapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,6 +15,16 @@ public class AnimalsLevelOne6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animals_level_one6);
+
+        final MediaPlayer a6_sound = MediaPlayer.create(this, R.raw.pig);
+        ImageButton a6 = findViewById(R.id.a6_sound_btn);
+
+        a6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                a6_sound.start();
+            }
+        });
 
         ImageButton pig_button = findViewById(R.id.pig_choice);
         ImageButton frog_button = findViewById(R.id.frog_choice);

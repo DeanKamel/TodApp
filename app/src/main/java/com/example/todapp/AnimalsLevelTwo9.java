@@ -3,6 +3,7 @@ package com.example.todapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,6 +15,8 @@ public class AnimalsLevelTwo9 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animals_level_two9);
+
+        final MediaPlayer horse = MediaPlayer.create(this, R.raw.horse_p);
 
 
         ImageButton frog_button = findViewById(R.id.frog_choice);
@@ -27,6 +30,7 @@ public class AnimalsLevelTwo9 extends AppCompatActivity {
                 AnimalsLevelOne.xp_animals++;
                 Intent intent = new Intent(getApplicationContext(), AnimalsLevelTwo10.class);
                 startActivity(intent);
+                horse.start();
                 finish();
             }
         });

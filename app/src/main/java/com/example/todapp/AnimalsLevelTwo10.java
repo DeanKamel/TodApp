@@ -20,18 +20,19 @@ public class AnimalsLevelTwo10 extends AppCompatActivity {
         ImageButton pig_button = findViewById(R.id.pig_choice);
         ImageButton cow_button = findViewById(R.id.cow_choice);
 
-        pig_button.setOnClickListener(new View.OnClickListener() {
+        horse_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
                 AnimalsLevelOne.xp_animals++;
                 Intent intent = new Intent(getApplicationContext(), AnimalsGame.class);
                 startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Completed Level 2!!!", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
 
-        horse_button.setOnClickListener(new View.OnClickListener() {
+        pig_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();

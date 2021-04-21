@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDEABD"
     tools:context=".AnimalsLevelTwo9">
 
 
@@ -15,6 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="150dp"
+        android:background="#FDEABD"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Choosefrog"
         app:srcCompat="@drawable/cat" />
@@ -24,6 +26,7 @@
         android:layout_width="114dp"
         android:layout_height="125dp"
         android:layout_marginTop="150dp"
+        android:background="#FDEABD"
         app:layout_constraintEnd_toStartOf="@+id/frog_choice"
         app:layout_constraintStart_toEndOf="@+id/cat_choice"
         app:layout_constraintTop_toBottomOf="@+id/Choosefrog"
@@ -36,15 +39,16 @@
         android:layout_marginTop="150dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="#FDEABD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Choosefrog"
         app:srcCompat="@drawable/frog" />
 
     <TextView
         android:id="@+id/Choosefrog"
-        android:layout_width= "wrap_content"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:layout_marginTop="80dp"
         android:text="Which one is the cat?"
         android:textAllCaps="false"
         android:textColor="#DC1313"
@@ -52,7 +56,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
