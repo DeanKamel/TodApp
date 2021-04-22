@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -25,11 +27,23 @@ public class ProfilePage extends AppCompatActivity {
 
 
     private TextView nameTextView, usernameTextView, emailTextView;
+    Button updateAcct;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+
+        updateAcct = findViewById(R.id.updateAccount);
+        updateAcct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), UpdateAccount.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         nameTextView = findViewById(R.id.name_textview);
@@ -40,5 +54,7 @@ public class ProfilePage extends AppCompatActivity {
         nameTextView.setText(Login.nameFromDB);
         usernameTextView.setText(Login.usernameFromDB);
         emailTextView.setText(Login.emailFromDB);
+
+
     }
 }

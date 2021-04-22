@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodApp"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".UpdateAccount"></activity>
+        <activity android:name=".ForgotPassword" />
         <activity android:name=".AnimalsLevelTwo10" />
         <activity android:name=".AnimalsLevelTwo9" />
         <activity android:name=".AnimalsLevelTwo8" />
