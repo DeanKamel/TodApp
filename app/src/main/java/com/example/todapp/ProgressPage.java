@@ -13,11 +13,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class ProgressPage extends AppCompatActivity {
 
     Integer correctAnimals, wrongAnimals, correctAlphabet, wrongAlphabet, correctNumbers, wrongNumbers = 0;
-
+    Integer alphabetPlays, animalPlays, numberPlays;
     Double animP,alphaP,numP;
+
 
 
     @Override
@@ -36,7 +41,7 @@ public class ProgressPage extends AppCompatActivity {
         TextView wrong_alph = findViewById(R.id.alphabet_wrong);
         TextView xp_num = findViewById(R.id.number_xp);
         TextView wrong_num = findViewById(R.id.wrong_number);
-
+        TextView favGame = findViewById(R.id.favoriteGame);
 
         TextView animalPercent = findViewById(R.id.animPercent);
         TextView numberPercent = findViewById(R.id.numPercent);
@@ -62,13 +67,30 @@ public class ProgressPage extends AppCompatActivity {
                     wrongNumbers = snap.child(Login.enteredUsername).child("wrongNumbers").getValue(Integer.class);
                     wrong_num.setText(String.valueOf(wrongNumbers));
 
-                    animP = ((double)correctAnimals / (correctAnimals + wrongAnimals)) * 100;
-                    numP = ((double)correctNumbers / (correctNumbers + wrongNumbers)) * 100;
-                    alphaP = ((double)correctAlphabet/ (wrongAlphabet + correctAlphabet)) * 100;
+                    alphabetPlays = snap.child(Login.enteredUsername).child("timesPlayedAlphabet").getValue(Integer.class);
+                    animalPlays = snap.child(Login.enteredUsername).child("timesPlayedAnimals").getValue(Integer.class);
+                    numberPlays = snap.child(Login.enteredUsername).child("timesPlayedNumbers").getValue(Integer.class);
 
-                    animalPercent.setText(String.valueOf(animP));
-                    alphabetPercent.setText(String.valueOf(numP));
-                    numberPercent.setText(String.valueOf(alphaP));
+                    String favorite;
+                    if(alphabetPlays > animalPlays && alphabetPlays > numberPlays)
+                        favorite = "Alphabet Game";
+                    else if(numberPlays > animalPlays && numberPlays > alphabetPlays)
+                        favorite = "Numbers Game";
+                    else
+                        favorite = "Animals Game";
+
+                    favGame.setText(favorite);
+
+                    //set the decimal points to 2
+                    DecimalFormat df = new DecimalFormat("##.##");
+                    df.setRoundingMode(RoundingMode.DOWN);
+
+                    animP = Double.valueOf(df.format((((double)correctAnimals / (correctAnimals + wrongAnimals)) * 100)));
+                    numP = Double.valueOf(df.format((((double)correctNumbers / (correctNumbers + wrongNumbers)) * 100)));
+                    alphaP = Double.valueOf(df.format((((double)correctAlphabet/ (wrongAlphabet + correctAlphabet)) * 100)));
+                    animalPercent.setText(String.valueOf(animP) + '%');
+                    alphabetPercent.setText(String.valueOf(alphaP)+ '%');
+                    numberPercent.setText(String.valueOf(numP) + '%');
                 }
             }
             @Override
