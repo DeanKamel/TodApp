@@ -35,7 +35,9 @@ public class NumbersLevelTwo8 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-                NumbersLevelOne.xp_numbers++;
+                NumbersLevelOne.correctNumbersDB++;
+                NumbersLevelOne.ref.child(Login.usernameFromDB).child("correctNumbers").setValue(NumbersLevelOne.correctNumbersDB);
+
                 Intent intent = new Intent(getApplicationContext(), NumbersLevelTwo9.class);
                 startActivity(intent);
                 finish();
@@ -46,7 +48,8 @@ public class NumbersLevelTwo8 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                NumbersLevelOne.wrong_numbers++;
+                NumbersLevelOne.wrongNumbersDB++;
+                NumbersLevelOne.ref.child(Login.usernameFromDB).child("wrongNumbers").setValue(NumbersLevelOne.wrongNumbersDB);
             }
         });
 
@@ -54,7 +57,8 @@ public class NumbersLevelTwo8 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-                NumbersLevelOne.wrong_numbers++;
+                NumbersLevelOne.wrongNumbersDB++;
+                NumbersLevelOne.ref.child(Login.usernameFromDB).child("wrongNumbers").setValue(NumbersLevelOne.wrongNumbersDB);
             }
         });
     }

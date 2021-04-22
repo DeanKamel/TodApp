@@ -26,14 +26,44 @@ import com.google.firebase.database.ValueEventListener;
 public class ProfilePage extends AppCompatActivity {
 
 
-    private TextView nameTextView, usernameTextView, emailTextView;
+    private TextView nameTextView, usernameTextView, emailTextView, addressTextView, phoneTextView, childTextView;
     Button updateAcct;
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference ref = database.getReference("users");
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_page);
+
+
+        nameTextView = findViewById(R.id.name_textview);
+        usernameTextView = findViewById(R.id.username_textview);
+        emailTextView = findViewById(R.id.email_textview);
+        phoneTextView = findViewById(R.id.phoneNo);
+        addressTextView = findViewById(R.id.address);
+        childTextView = findViewById(R.id.childName);
+
+        //query to get our values
+        Query getValues = ref.orderByChild("username").equalTo(Login.enteredUsername);
+        getValues.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snap) {
+                if (snap.exists()) {
+                    nameTextView.setText(snap.child(Login.enteredUsername).child("name").getValue(String.class));
+                    usernameTextView.setText(snap.child(Login.enteredUsername).child("username").getValue(String.class));
+                    emailTextView.setText(snap.child(Login.enteredUsername).child("email").getValue(String.class));
+                    addressTextView.setText(snap.child(Login.enteredUsername).child("address").getValue(String.class));
+                    phoneTextView.setText(snap.child(Login.enteredUsername).child("phone").getValue(String.class));
+                    childTextView.setText(snap.child(Login.enteredUsername).child("childName").getValue(String.class));
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
 
         updateAcct = findViewById(R.id.updateAccount);
         updateAcct.setOnClickListener(new View.OnClickListener() {
@@ -45,15 +75,6 @@ public class ProfilePage extends AppCompatActivity {
             }
         });
 
-
-        nameTextView = findViewById(R.id.name_textview);
-        usernameTextView = findViewById(R.id.username_textview);
-        emailTextView = findViewById(R.id.email_textview);
-
-
-        nameTextView.setText(Login.nameFromDB);
-        usernameTextView.setText(Login.usernameFromDB);
-        emailTextView.setText(Login.emailFromDB);
 
 
     }

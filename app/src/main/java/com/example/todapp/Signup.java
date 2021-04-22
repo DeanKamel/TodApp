@@ -33,6 +33,9 @@ public class Signup extends AppCompatActivity {
         textInputEditTextUsername = findViewById(R.id.profile_username);
         textInputEditTextPassword = findViewById(R.id.textInputLayoutPassword);
         textInputEditTextEmail = findViewById(R.id.profile_email);
+
+
+
         signup_button = findViewById(R.id.signup_btn);
         loginView = findViewById(R.id.loginText);
 
@@ -165,9 +168,14 @@ public class Signup extends AppCompatActivity {
         int timesPlayed_animals = 0;
         int timesPlayed_numbers = 0;
 
+        String phone = "Please Update Phone Number";
+        String address = "Please Update Address";
+        String childName = "Please Update Child's Name";
+
+
 
         UserHelperClass helperClass = new UserHelperClass(name, email, username, password, correct_alphabet, correct_animals, correct_numbers,
-                                                        wrong_alphabet, wrong_animals, wrong_numbers, timesPlayed_alphabet, timesPlayed_animals, timesPlayed_numbers);
+                                                        wrong_alphabet, wrong_animals, wrong_numbers, timesPlayed_alphabet, timesPlayed_animals, timesPlayed_numbers, phone, address, childName);
         reference.child(username).setValue(helperClass);
 
         return 1;

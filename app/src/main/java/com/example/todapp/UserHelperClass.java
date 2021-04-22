@@ -2,7 +2,7 @@ package com.example.todapp;
 
 public class UserHelperClass {
 
-    String name,email,username,password;
+    String name,email,username,password,phone,address,childName;
     int correct_alphabet = 0;
     int correct_animals = 0;
     int correct_numbers = 0;
@@ -18,7 +18,7 @@ public class UserHelperClass {
     }
 
     public UserHelperClass(String name, String email, String username, String password, int correct_alphabet, int correct_animals, int correct_numbers, int wrong_alphabet,
-                           int wrong_animals, int wrong_numbers, int timesPlayed_alphabet, int timesPlayed_animals, int timesPlayed_numbers) {
+                           int wrong_animals, int wrong_numbers, int timesPlayed_alphabet, int timesPlayed_animals, int timesPlayed_numbers,String phone, String address, String childName) {
         this.name = name;
         this.email = email;
         this.username = username;
@@ -32,7 +32,18 @@ public class UserHelperClass {
         this.timesPlayed_alphabet = timesPlayed_alphabet;
         this.timesPlayed_animals = timesPlayed_animals;
         this.timesPlayed_numbers = timesPlayed_numbers;
+        this.address = address;
+        this.phone = phone;
+        this.childName = childName;
     }
+    public String getChildName() {return childName; }
+    public void setchildName(String childName) {this.childName = childName;}
+
+    public String getPhone() {return phone; }
+    public void setPhone(String phone) {this.phone = phone;}
+
+    public String getAddress() {return address; }
+    public void setAddress(String address) {this.address = address;}
 
     public String getName() {
         return name;
