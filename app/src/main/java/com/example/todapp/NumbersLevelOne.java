@@ -24,6 +24,7 @@ public class NumbersLevelOne extends AppCompatActivity {
     public static int xp_numbers = 0;
     public static int wrong_numbers = 0;
 
+
     public static Integer correctNumbersDB, wrongNumbersDB;
 
     public static final FirebaseDatabase database = FirebaseDatabase.getInstance();

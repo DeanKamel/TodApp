@@ -15,7 +15,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProgressPage extends AppCompatActivity {
 
-    Integer correctAnimals, wrongAnimals, correctAlphabet, wrongAlphabet, correctNumbers, wrongNumbers;
+    Integer correctAnimals, wrongAnimals, correctAlphabet, wrongAlphabet, correctNumbers, wrongNumbers = 0;
+
+    Double animP,alphaP,numP;
 
 
     @Override
@@ -36,6 +38,9 @@ public class ProgressPage extends AppCompatActivity {
         TextView wrong_num = findViewById(R.id.wrong_number);
 
 
+        TextView animalPercent = findViewById(R.id.animPercent);
+        TextView numberPercent = findViewById(R.id.numPercent);
+        TextView alphabetPercent = findViewById(R.id.alphaPercent);
 
         Query getValues = ref.orderByChild("username").equalTo(Login.enteredUsername);
         getValues.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -57,6 +62,13 @@ public class ProgressPage extends AppCompatActivity {
                     wrongNumbers = snap.child(Login.enteredUsername).child("wrongNumbers").getValue(Integer.class);
                     wrong_num.setText(String.valueOf(wrongNumbers));
 
+                    animP = ((double)correctAnimals / (correctAnimals + wrongAnimals)) * 100;
+                    numP = ((double)correctNumbers / (correctNumbers + wrongNumbers)) * 100;
+                    alphaP = ((double)correctAlphabet/ (wrongAlphabet + correctAlphabet)) * 100;
+
+                    animalPercent.setText(String.valueOf(animP));
+                    alphabetPercent.setText(String.valueOf(numP));
+                    numberPercent.setText(String.valueOf(alphaP));
                 }
             }
             @Override
@@ -65,9 +77,7 @@ public class ProgressPage extends AppCompatActivity {
         });
 
 
-
-
-        //info for alphabet
+//info for alphabet
 //        TextView xp_alph = findViewById(R.id.xp_alphabet);
 //        TextView wrong_alph = findViewById(R.id.alphabet_wrong);
 //        xp_alph.setText(String.valueOf(AlphabetLevelOne.xp));
