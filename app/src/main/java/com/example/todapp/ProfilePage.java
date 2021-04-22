@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -27,7 +28,7 @@ public class ProfilePage extends AppCompatActivity {
 
 
     private TextView nameTextView, usernameTextView, emailTextView, addressTextView, phoneTextView, childTextView;
-    Button updateAcct;
+    Button updateAcct,deleteAcct;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference("users");
 
@@ -75,7 +76,27 @@ public class ProfilePage extends AppCompatActivity {
             }
         });
 
+        deleteAcct = findViewById(R.id.deleteAccount);
+        deleteAcct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                deleteAccount(Login.usernameFromDB);
 
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
+    }
+
+    void deleteAccount(String accountInfo)
+    {
+        DatabaseReference acct = FirebaseDatabase.getInstance().getReference("users").child(Login.usernameFromDB);
+        acct.removeValue();
+        Toast.makeText(getApplicationContext(), "Account Has Been Deleted", Toast.LENGTH_SHORT).show();
 
     }
 }
