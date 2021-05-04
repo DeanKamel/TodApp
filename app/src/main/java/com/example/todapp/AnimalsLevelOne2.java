@@ -45,11 +45,8 @@ public class AnimalsLevelOne2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Correct! +1xp", Toast.LENGTH_SHORT).show();
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     AnimalsLevelOne.correctAnimalDB++;
                     AnimalsLevelOne.ref.child(Login.usernameFromDB).child("correctAnimals").setValue(AnimalsLevelOne.correctAnimalDB);
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
                     Intent intent = new Intent(getApplicationContext(), AnimalsLevelOne3.class);
                     startActivity(intent);
@@ -61,10 +58,8 @@ public class AnimalsLevelOne2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     AnimalsLevelOne.wrongAnimalDB++;
                     AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             });
 
@@ -72,10 +67,8 @@ public class AnimalsLevelOne2 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(getApplicationContext(), "Wrong! Try Again", Toast.LENGTH_SHORT).show();
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                     AnimalsLevelOne.wrongAnimalDB++;
                     AnimalsLevelOne.ref.child(Login.usernameFromDB).child("wrongAnimals").setValue(AnimalsLevelOne.wrongAnimalDB);
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                 }
             });
     }

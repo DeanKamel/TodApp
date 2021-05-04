@@ -28,7 +28,7 @@ public class ProfilePage extends AppCompatActivity {
 
 
     private TextView nameTextView, usernameTextView, emailTextView, addressTextView, phoneTextView, childTextView;
-    Button updateAcct,deleteAcct;
+    Button updateAcct,deleteAcct, logout;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference("users");
 
@@ -45,6 +45,7 @@ public class ProfilePage extends AppCompatActivity {
         phoneTextView = findViewById(R.id.phoneNo);
         addressTextView = findViewById(R.id.address);
         childTextView = findViewById(R.id.childName);
+
 
         //query to get our values
         Query getValues = ref.orderByChild("username").equalTo(Login.enteredUsername);
@@ -89,6 +90,17 @@ public class ProfilePage extends AppCompatActivity {
         });
 
 
+        logout = findViewById(R.id.Logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view2) {
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
     }
 
@@ -99,4 +111,5 @@ public class ProfilePage extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "Account Has Been Deleted", Toast.LENGTH_SHORT).show();
 
     }
+
 }

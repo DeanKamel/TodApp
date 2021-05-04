@@ -76,8 +76,10 @@ public class ProgressPage extends AppCompatActivity {
                         favorite = "Alphabet Game";
                     else if(numberPlays > animalPlays && numberPlays > alphabetPlays)
                         favorite = "Numbers Game";
-                    else
+                    else if(animalPlays > numberPlays && animalPlays > alphabetPlays)
                         favorite = "Animals Game";
+                    else
+                        favorite = "N/A";
 
                     favGame.setText(favorite);
 

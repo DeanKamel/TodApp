@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity {
         login_button = findViewById(R.id.login_btn);
         signupView = findViewById(R.id.signup_text);
 
-        forgotPassword = findViewById(R.id.forgotPassword);
+//        forgotPassword = findViewById(R.id.forgotPassword);
 
 
 
@@ -67,13 +67,13 @@ public class Login extends AppCompatActivity {
         });
 
 
-        forgotPassword.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ForgotPassword.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        forgotPassword.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), ForgotPassword.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
     }
 
