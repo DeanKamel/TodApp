@@ -10,13 +10,10 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="225dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_width="163dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/custom_button"
         android:fontFamily="@font/bangers"
         android:gravity="center_horizontal"
         android:text="@string/login"
@@ -29,13 +26,10 @@
 
     <Button
         android:id="@+id/create_account"
-        android:layout_width="225dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_width="196dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custom_button"
         android:fontFamily="@font/bangers"
         android:gravity="center_horizontal"
         android:text="@string/create_account"
@@ -43,6 +37,7 @@
         android:textSize="20sp"
         app:backgroundTint="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
 
@@ -55,10 +50,10 @@
         android:layout_marginTop="187dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
+        android:contentDescription="@string/logo_content_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="@string/logo_content_description" />
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

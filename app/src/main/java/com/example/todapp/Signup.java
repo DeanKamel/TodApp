@@ -168,9 +168,9 @@ public class Signup extends AppCompatActivity {
         int timesPlayed_animals = 0;
         int timesPlayed_numbers = 0;
 
-        String phone = "Please Update Phone Number";
-        String address = "Please Update Address";
-        String childName = "Please Update Child's Name";
+        String phone = "Update Phone Number";
+        String address = "Update School";
+        String childName = "Update Child's Name";
 
 
 

@@ -5,54 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FDEABD"
+    android:hapticFeedbackEnabled="false"
     tools:context=".Home_Screen">
+
 
     <Button
         android:id="@+id/start_game_btn"
-        android:layout_width="169dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_width="157dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/bangers"
         android:text="@string/start_game"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:backgroundTint="#4CAF50"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/profile_btn"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/prompt_bold"
         android:text="@string/profile"
+        android:textColor="#F6F4F2"
+        app:backgroundTint="#2196F3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/start_game_btn" />
 
     <Button
         android:id="@+id/progress_btn"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/prompt_bold"
         android:text="@string/progress"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#E7EEF1"
+        app:backgroundTint="#2196F3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/start_game_btn" />
-
-
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="244dp"
         android:layout_height="257dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/start_game_btn"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />

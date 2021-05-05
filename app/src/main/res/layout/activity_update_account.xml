@@ -13,7 +13,9 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:fontFamily="casual"
         android:hint="Enter Data Here"
+        android:textColor="#040303"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/ModifyAccountView" />
@@ -23,7 +25,9 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:hint="Enter Data Here"
+        android:textColor="#040303"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/passwordtext"
         app:layout_constraintTop_toBottomOf="@+id/usernameEdit" />
@@ -33,7 +37,9 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:hint="Enter Data Here"
+        android:textColor="#040303"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/nametext"
         app:layout_constraintTop_toBottomOf="@+id/passwordEdit" />
@@ -43,7 +49,9 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:hint="Enter Data Here"
+        android:textColor="#040303"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameEdit" />
 
@@ -52,7 +60,9 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:hint="Enter Data Here"
+        android:textColor="#040303"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEdit" />
 
@@ -61,7 +71,9 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:hint="Enter Data Here"
+        android:textColor="#040303"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressEdit" />
 
@@ -70,20 +82,28 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:hint="Enter Data Here"
+        android:textColor="#040303"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneEdit" />
 
 
     <TextView
         android:id="@+id/ModifyAccountView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#F3D58E"
+        android:layout_width="316dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="casual"
         android:text="Edit Account Info"
-        android:textColor="#E30505"
+        android:textColor="#673AB7"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -92,7 +112,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/prompt_bold"
         android:text="Confirm Changes"
+        app:backgroundTint="#EF0D0D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/childNameEdit" />
@@ -102,8 +125,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="UserName:"
+        android:textColor="#040303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ModifyAccountView" />
 
@@ -113,8 +138,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="Password:"
+        android:textColor="#040303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -123,8 +150,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="Parent Name:"
+        android:textColor="#040303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordtext" />
 
@@ -133,8 +162,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="Email Address:"
+        android:textColor="#040303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nametext" />
 
@@ -143,8 +174,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:gravity="center"
-        android:text="Address:"
+        android:text="School:"
+        android:textColor="#040303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailtext" />
 
@@ -153,8 +186,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="Phone Number:"
+        android:textColor="#040303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addresstext" />
 
@@ -163,8 +198,10 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="Child's Name:"
+        android:textColor="#040303"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phonetext" />
 </androidx.constraintlayout.widget.ConstraintLayout>

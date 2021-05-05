@@ -13,4 +13,11 @@
     <string name="start_game">Start game</string>
     <string name="profile">Profile</string>
     <string name="progress">Progress</string>
+    <string name="correct"><u>Correct:</u></string>
+    <string name="inc"><u>Inc:</u></string>
+    <string name="percent"><u>%:</u></string>
+    <string name="age_1"><u>Age: 1</u></string>
+    <string name="age_2"><u>Age: 2</u></string>
+    <string name="age_3"><u>Age: 3</u></string>
+    <string name="age_1_2"><u>Age: 1-2</u></string>
 </resources>

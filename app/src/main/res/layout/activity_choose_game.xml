@@ -12,10 +12,12 @@
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_marginTop="188dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/freckle_face"
         android:text="Alphabet"
-        app:backgroundTint="#4CAF50"
+        android:textSize="18sp"
+        app:backgroundTint="#F44336"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,8 +25,11 @@
         android:id="@+id/numbers_btn"
         android:layout_width="150dp"
         android:layout_height="80dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/freckle_face"
         android:text="Numbers"
-        app:backgroundTint="#4CAF50"
+        android:textSize="18sp"
+        app:backgroundTint="#E91E63"
         app:layout_constraintBottom_toTopOf="@+id/animals_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,11 +40,13 @@
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_marginBottom="188dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/freckle_face"
         android:text="Animals"
-        app:backgroundTint="#4CAF50"
+        android:textSize="18sp"
+        app:backgroundTint="#9C27B0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
 
 

@@ -27,16 +27,12 @@
         android:id="@+id/name_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:fontFamily="casual"
         android:text="Name"
-        android:textColor="#000000"
+        android:textColor="#673AB7"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profilePicture" />
 
@@ -44,103 +40,109 @@
         android:id="@+id/username_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:fontFamily="casual"
         android:text="Username"
-        android:textColor="#191818"
+        android:textColor="#673AB7"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/address" />
 
     <TextView
         android:id="@+id/email_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:fontFamily="casual"
         android:text="Email"
-        android:textColor="#020202"
+        android:textColor="#673AB7"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneNo" />
 
     <TextView
         android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Address"
-        android:textColor="#020202"
-        android:textSize="24dp"
+        android:fontFamily="casual"
+        android:text="School"
+        android:textColor="#673AB7"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_textview" />
-
-    <TextView
-        android:id="@+id/childName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Child's Name"
-        android:textColor="#020202"
-        android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
+        app:layout_constraintTop_toBottomOf="@+id/childName" />
 
     <TextView
         android:id="@+id/phoneNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="casual"
         android:text="Phone Number"
-        android:textColor="#020202"
-        android:textSize="24dp"
+        android:textColor="#673AB7"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/childName" />
+        app:layout_constraintTop_toBottomOf="@+id/username_textview" />
+
+    <TextView
+        android:id="@+id/childName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="Child's Name"
+        android:textColor="#673AB7"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_textview" />
 
     <Button
         android:id="@+id/updateAccount"
-        android:layout_width="170dp"
-        android:layout_height="50dp"
+        android:layout_width="115dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="57dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/prompt_light"
         android:text="Update Account"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logout" />
+        app:backgroundTint="#2196F3"
+        app:layout_constraintEnd_toStartOf="@+id/deleteAccount"
+        app:layout_constraintStart_toEndOf="@+id/Logout"
+        app:layout_constraintTop_toBottomOf="@+id/email_textview" />
 
     <Button
         android:id="@+id/Logout"
-        android:layout_width="170dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="115dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="57dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/prompt_light"
         android:text="Logout"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="14sp"
+        app:backgroundTint="#2196F3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNo" />
+        app:layout_constraintTop_toBottomOf="@+id/email_textview" />
 
     <Button
         android:id="@+id/deleteAccount"
-        android:layout_width="170dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="116dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/prompt_light"
         android:text="Delete Account"
-        app:backgroundTint="#F30F0F"
+        android:textSize="14sp"
+        app:backgroundTint="#F61909"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateAccount" />
+        app:layout_constraintTop_toBottomOf="@+id/email_textview" />
 
     <!--    <com.google.android.material.textfield.TextInputLayout-->
     <!--        android:id="@+id/profile_name"-->

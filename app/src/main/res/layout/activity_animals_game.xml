@@ -14,7 +14,11 @@
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:layout_marginTop="28dp"
+        android:fontFamily="@font/freckle_face"
         android:text="Level 1"
+        android:textColor="#E1D8D8"
+        android:textSize="18sp"
+        app:backgroundTint="#2196F3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -25,7 +29,11 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
+        android:fontFamily="@font/freckle_face"
         android:text="Level 2"
+        android:textColor="#E1D8D8"
+        android:textSize="18sp"
+        app:backgroundTint="#E91E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -36,7 +44,10 @@
         android:layout_marginStart="76dp"
         android:layout_marginLeft="76dp"
         android:layout_marginTop="480dp"
-        android:text="Age: 1-2"
+        android:fontFamily="@font/freckle_face"
+        android:text="@string/age_1_2"
+        android:textColor="#171515"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,7 +58,10 @@
         android:layout_marginTop="480dp"
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
-        android:text="Age: 3"
+        android:fontFamily="@font/freckle_face"
+        android:text="@string/age_3"
+        android:textColor="#171515"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
